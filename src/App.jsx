@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/header.jsx";
 import Sidebar from "./components/sidebar.jsx";
-import Main from "./components/main.jsx";
+import Main from "./components/Main.jsx";
 import { Boardcontext } from "./context/boardcontext.jsx";
 
 export default function App() {

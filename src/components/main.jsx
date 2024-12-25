@@ -1,15 +1,22 @@
 import React, { useContext } from "react";
 import { Edit2, MoreHorizontal, UserPlus } from "react-feather"
 import Cardadd from "./cardadd.jsx";
-
+import { Boardcontext } from "../context/boardcontext.jsx";
 
 export default function Main() {
 
+    const {allboard, setallboard} = useContext(Boardcontext)
+    const bdata = allboard.boards[allboard.active]
     
+    const carddata = (e) => {
+        let newlist = [...bdata.list]
+        
+    }
+
     return(
         <div className="main">
             <div className="title-board">
-                <h2>My Trello app</h2>
+                <h2>{bdata.name}</h2>
                 <div className="share-btn">
                     <button className="share"> <UserPlus size={16}></UserPlus> Share</button>
                     <button style={{background:"none", border:"none", color:"white", cursor:"pointer"}}><MoreHorizontal size={18}></MoreHorizontal></button>
@@ -30,11 +37,9 @@ export default function Main() {
                                     <button style={{background:"none", border:"none", color:"white", cursor:"pointer"}}><Edit2 size={16}></Edit2></button>
                                 </span>
                             </div>
-                            <Cardadd></Cardadd>
+                            <Cardadd getcard={(e) => carddata(e)}></Cardadd>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

@@ -169,3 +169,11 @@ body {
 .create-btn:hover{
   border: 2px solid rgb(177, 177, 177) ;
 }
+
+.icon-btn {
+  cursor: pointer;
+  border: none;
+  padding-top: 2px;
+  padding-inline: 2px;
+  color: black;
+}

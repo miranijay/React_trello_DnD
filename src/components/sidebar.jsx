@@ -78,7 +78,7 @@ export default function Sidebar() {
                 <ul>
                     {allboard.boards && allboard.boards.map((x,i) => {
                         return (
-                            <li>
+                            <li key={i}>
                                 <button onClick={() => setActiveboard(i)} className="board-btn">
                                     <span style={{width: "10%",
                                     height: "max-content",
