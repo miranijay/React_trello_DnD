@@ -110,6 +110,7 @@ body {
   align-items: center;
   background-color: rgb(77, 73, 73);
   padding: 6px;
+  margin: 6px;
   cursor: pointer;
   border-radius: 6px;
   border: 1px solid rgb(111, 110, 110);
@@ -121,6 +122,18 @@ body {
 .card{
   display: flex;
   flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  flex-shrink: 0;
+  margin-right: 12px;
+  padding: 8px;
+  width: 240px;
+  border-radius: 6px;
+  background-color: black;
 }
 
 .pop-container {

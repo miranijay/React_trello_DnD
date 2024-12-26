@@ -8,7 +8,7 @@ export default function Sidebar() {
     const blankboard = {
         name: '',
         bgcolor: '#f60000',
-        items:[]
+        list:[]
     }
     const [boarddata, setboarddata] = useState(blankboard)
     const [collapsed, setcollapsed] = useState(false)
@@ -62,7 +62,7 @@ export default function Sidebar() {
                                         <label htmlFor="title">Board Title <span>*</span></label>
                                         <input value={boarddata.name} onChange={(e) => setboarddata({...boarddata,name:e.target.value})} type="text" className="form-input" />
                                         <label htmlFor="Color">Board Color</label>
-                                        <input value={boarddata.bgcolor} onChange={() => setboarddata({...boarddata,bgcolor:e.target.value})} type="color" className="form-input" />
+                                        <input value={boarddata.bgcolor} onChange={(e) => setboarddata({...boarddata,bgcolor:e.target.value})} type="color" className="form-input" />
                                         <button onClick={() => addboard()} className="create-btn">Create</button>
                                     </div>
                                 </div>
