@@ -32,7 +32,7 @@ export default function Sidebar() {
     }
 
     return(
-        <div className="sidebar" style={{ width: collapsed ? "38px" : "280px" }}>
+        <div className="sidebar" style={{ width: collapsed ? "26px" : "280px" }}>
             {collapsed && <div className="">
                 <button onClick={() => setcollapsed(!collapsed)} className="icon-btn">
                     <ChevronRight size={18}></ChevronRight>
